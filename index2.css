@@ -1,0 +1,839 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: genshinFont;
+  src: url(Assets/zh-cn.ttf);
+}
+
+body {
+  font-family: genshinFont;
+  color: #333;
+  line-height: 1.6;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+p {
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* .reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+} */
+
+.navbar {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 0 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar img {
+  width: 10rem;
+  height: auto;
+}
+
+.navbar a {
+  color: #fff;
+  text-shadow: 0 4px 4px #000;
+}
+
+.active-navbar-main,
+.navbar a:hover {
+  padding-top: 10px;
+  border-top: 2px solid #fff;
+}
+
+.register {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.profile-picture-container {
+  width: 50px;
+  text-align: center;
+  padding: 10px;
+}
+
+.profile-picture {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.navbar .toggle-btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.home-header {
+  background-image: url(https://github.com/lefren/hci/blob/main/home-bg.jpg?raw=true);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.jumbotron {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+}
+
+.jumbotron-text h1 {
+  font-size: 70px;
+  line-height: 80px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 5px #039;
+  font-weight: 100;
+  padding-top: 100px;
+  /* height: 100vh; */
+}
+
+.download-button {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.google-play img,
+.app-store img {
+  cursor: pointer;
+}
+
+
+.news {
+  background-image: url(https://github.com/lefren/hci/blob/main/News-bg.jpg?raw=true);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  position: relative;
+}
+
+.news-h1 {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 100;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.content {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin-top: 30px;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.content img {
+  width: 50%;
+  filter: blur(0);
+}
+
+.inside-content h1 {
+  line-height: 1.5;
+  font-size: 40px;
+}
+
+.bg-new {
+  background-image: url("https://github.com/lefren/hci/blob/main/update-with-stars.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.updates-header {
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.h1-mod {
+  padding-top: 50vh;
+  font-weight: 100;
+  color: #fff;
+  font-size: 4rem;
+}
+
+.update-characters {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.update-characters h1 {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 100;
+}
+
+.update-characters-header {
+  text-align: center;
+}
+
+.characters-update {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+}
+
+.weapons-update {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.characters-update img {
+  width: 70%;
+}
+
+.characters-update-content img {
+  width: 30%;
+}
+
+.update-weapons h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 100;
+}
+
+.weapons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.weapons h1 {
+  text-align: center;
+}
+
+.navbar-about {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-image: url(Assets/navbar-about.png);
+  position: fixed;
+  z-index: 2;
+}
+
+.navbar-about ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 0 0;
+}
+
+.navbar-about li {
+  margin: 0 15px;
+}
+
+.navbar-about img {
+  width: 10rem;
+  height: auto;
+}
+
+.navbar-about a {
+  color: #fff;
+}
+
+.menu a:hover {
+  padding-top: 10px;
+  border-top: 2px solid #fff;
+}
+
+.navbar-about .toggle-btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.about-header {
+  background-position: cover;
+  background-size: cover;
+  width: 100%;
+}
+
+.about-game-screenshots {
+  background-image: url(Assets/about-us-bg-1.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.about-game-screenshots-header img {
+  width: 20%;
+  padding: 30px;
+}
+
+.game-screenshots-text {
+  justify-content: center;
+}
+
+.game-screenshots-text h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.about-game-screenshots-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.game-screenshots-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.screenshots-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.arrow-left,
+.arrow-right {
+  justify-items: center;
+}
+
+.game-screenshots-right {
+  color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.about-us-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+}
+
+.about-us-banner-logo {
+  align-items: center;
+}
+
+.about-us-banner-logo img {
+  width: 30%;
+}
+
+.about-us-banner-text h1 {
+  color: #fff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+@keyframes char-animation {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.1;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    font-size: 30px;
+  }
+
+  10% {
+    font-size: 32px;
+  }
+
+  25% {
+    font-size: 34px;
+  }
+
+  50% {
+    font-size: 38px;
+  }
+
+  100%,
+  75% {
+    font-size: 40px;
+  }
+}
+
+footer {
+  background-image: url(https://github.com/lefren/hci/blob/main/footer-bg-1.png?raw=true);
+}
+
+.icon {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding-top: 30px;
+  border-radius: 50%;
+}
+
+.icon i {
+  color: #fff;
+  font-size: 30px;
+}
+
+.icon i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.logo-footer {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.logo-footer img {
+  width: 15%;
+}
+
+.privacy ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 20px;
+}
+
+.privacy ul li a {
+  color: #fff;
+}
+
+.privacy ul li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hoyoverse {
+  width: 30%;
+}
+
+.logo-footer-2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 50px;
+}
+
+.footer-copyright p,
+.footer-text p {
+  color: #fff;
+  text-align: center;
+  margin: 20px 20px 0 20px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 2;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu a {
+  color: #fff;
+}
+
+.dropdown-menu.open {
+  /* display: none; */
+  height: 240px;
+}
+
+.active-nav,
+.dropdown-menu li a:hover {
+  text-shadow: 0 0 10px azure, 0 0 20px #0ff, 0 0 40px #1e90ff, 0 0 80px #00f;
+  will-change: filter, color;
+  filter: saturate(60%);
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  header {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+  .menu,
+  .register {
+    display: none;
+  }
+
+  .navbar .toggle-btn {
+    display: block;
+    padding: 10px;
+  }
+
+  .jumbotron-character img {
+    display: none;
+  }
+
+  .jumbotron-text h1 {
+    font-size: 60px;
+    text-align: center;
+    top: 0;
+    left: 40%;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+
+  .inside-content h1 {
+    font-size: 40px;
+  }
+
+  .inside-content p {
+    font-size: 15px;
+  }
+
+  .update-header {
+    background-size: cover;
+  }
+
+  .update-header h1 {
+    left: 30%;
+  }
+
+  .update-header img {
+    bottom: -500px;
+  }
+
+  .update-header h1 {
+    top: 30vh;
+    font-size: 50px;
+  }
+
+  .update-characters {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .characters-update img,
+  .weapons-update img {
+    width: 80%;
+  }
+
+  .img-weapon2 {
+    width: 80%;
+  }
+
+  .navbar-about .toggle-btn {
+    display: block;
+    padding: 10px;
+  }
+
+  .logo-footer img,
+  .logo-footer-2 img {
+    width: 30%;
+  }
+
+  .hoyoverse {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron-text h1 {
+    margin-left: 10px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content img {
+    width: 70%;
+  }
+
+  .news-h1 {
+    font-size: 50px;
+    padding-top: 20px;
+  }
+
+  .content img {
+    width: 50%;
+  }
+
+  .inside-content h1 {
+    font-size: 30px;
+    line-height: 1.4;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .inside-content p {
+    font-size: 10px;
+  }
+
+  .update-header h1 {
+    top: 30vh;
+    font-size: 35px;
+  }
+
+  .content {
+    margin-top: 20px;
+  }
+
+  .characters-update {
+    grid-template-columns: 1fr;
+  }
+
+  .update-characters h1 {
+    font-size: 35px;
+  }
+
+  .weapons h1 {
+    font-size: 35px;
+  }
+
+  .weapons-test img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .navbar img {
+    width: 7rem;
+  }
+
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
+
+  .icon i {
+    font-size: 20px;
+  }
+
+  .privacy ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content img {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .inside-content h1 {
+    font-size: 20px;
+  }
+
+  .inside-content p {
+    font-size: 10px;
+  }
+
+  .download-button {
+    flex-direction: column;
+  }
+
+  .jumbotron-text h1 {
+    font-size: 40px;
+    line-height: 58px;
+    margin-top: 35px;
+  }
+
+
+
+  .update-header h1 {
+    top: 20vh;
+    font-size: 30px;
+  }
+
+  .h1-mod {
+    font-size: 3rem;
+  }
+
+  .update-characters {
+    padding-top: 100px;
+  }
+
+  .characters-update-header {
+    padding-top: 200px;
+  }
+
+  .characters-update-header h1,
+  .weapons-test h1 {
+    font-size: 30px;
+  }
+
+  .characters-update,
+  .weapons-update {
+    flex-direction: column;
+  }
+
+  .logo-footer-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer a,
+  footer p {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+
+}

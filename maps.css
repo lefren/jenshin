@@ -1,0 +1,764 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: genshinFont;
+  src: url(Assets/zh-cn.ttf);
+}
+
+body {
+  font-family: genshinFont;
+  color: #333;
+  line-height: 1.6;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+p {
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 0 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar img {
+  width: 10rem;
+  height: auto;
+}
+
+.navbar a {
+  color: #fff;
+  text-shadow: 0 4px 4px #000;
+}
+
+.active-navbar-main,
+.navbar-container a:hover {
+  padding-top: 10px;
+  border-top: 2px solid #fff;
+}
+
+.register {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.profile-picture-container {
+  width: 50px;
+  text-align: center;
+  padding: 10px;
+}
+
+.profile-picture {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.navbar .toggle-btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.home-header {
+  background-image: url(Assets/jumbotron-home.jpg);
+  background-position: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.content {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin-top: 30px;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.content img {
+  width: 50%;
+  filter: blur(0);
+}
+
+.navbar-about {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-image: url(Assets/navbar-about.png);
+  position: fixed;
+  z-index: 2;
+}
+
+.navbar-about ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 0 0;
+}
+
+.navbar-about li {
+  margin: 0 15px;
+}
+
+.navbar-about img {
+  width: 10rem;
+  height: auto;
+}
+
+.navbar-about a {
+  color: #fff;
+}
+
+.menu a:hover {
+  padding-top: 10px;
+  border-top: 2px solid #fff;
+}
+
+.navbar-about .toggle-btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown-menu.open {
+  /* display: none; */
+  height: 240px;
+}
+
+.about-header {
+  background-position: cover;
+  background-size: cover;
+  width: 100%;
+}
+
+.register-all {
+  background-image: url(Assets/register-bg.jpg);
+  background-position: cover;
+  background-size: cover;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  animation: changeBackground 100s ease-in-out infinite;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url(https://github.com/lefren/hci/blob/main/register-bg-2.jpg?raw=true);
+  }
+
+  25% {
+    background-image: url(https://github.com/lefren/hci/blob/main/register-bg-1.jpg?raw=true);
+  }
+
+  50% {
+    background-image: url(https://github.com/lefren/hci/blob/main/register-bg.jpg?raw=true);
+  }
+
+  100% {
+    background-image: url(https://github.com/lefren/hci/blob/main/register-bg-3.jpg?raw=true);
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  text-shadow: 0 0 10px gold, 0 0 20px #b22222, 0 0 40px pink, 0 0 80px red;
+  will-change: filter, color;
+  filter: saturate(60%);
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@keyframes char-animation {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.1;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    font-size: 30px;
+  }
+
+  10% {
+    font-size: 32px;
+  }
+
+  25% {
+    font-size: 34px;
+  }
+
+  50% {
+    font-size: 38px;
+  }
+
+  100%,
+  75% {
+    font-size: 40px;
+  }
+}
+
+.maps-main {
+  display: flex;
+  background-image: url(https://github.com/lefren/hci/blob/main/BG.png?raw=true);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0fr 1fr 1fr 1fr 1fr 1fr 1fr 0fr;
+  grid-auto-flow: row;
+  padding-top: 100px;
+  align-items: center;
+}
+
+.mp1 {
+  grid-area: 3/2/5/6;
+  height: 35vh;
+}
+
+.mp1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mp2 {
+  grid-area: 3/6/5/10;
+  height: 35vh;
+}
+
+.mp2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mp3 {
+  grid-area: 5/2/7/6;
+  height: 35vh;
+}
+
+.mp3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mp4 {
+  grid-area: 5/6/7/10;
+  height: 35vh;
+}
+
+.mp4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.k1 {
+  grid-area: 2/4/5/6;
+  height: 52vh;
+}
+
+.fremmax {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+
+.fremmax img {
+  padding-top: 21%;
+  padding-left: 25%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.k2 {
+  grid-area: 2/8/5/10;
+  height: 52vh;
+}
+
+.k3 {
+  grid-area: 4/4/7/6;
+  height: 52vh;
+}
+
+.k4 {
+  grid-area: 4/8/7/10;
+  height: 52vh;
+}
+
+.maps1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 100vh;
+}
+
+.maps1.mondstadt {
+  background-image: url(https://github.com/lefren/hci/blob/main/maps1.png?raw=true);
+}
+
+.maps1.liyue {
+  background-image: url(https://github.com/lefren/hci/blob/main/liyue-BG.jpg?raw=true);
+}
+
+.maps1.inazuma {
+  background-image: url(https://github.com/lefren/hci/blob/main/inazuma-BG.jpg?raw=true);
+}
+
+.maps1.sumeru {
+  background-image: url(https://github.com/lefren/hci/blob/main/sumeru-bg-maps.jpg?raw=true);
+}
+
+.maps-1-header {
+  animation: title-animation 2s infinite;
+}
+
+.maps-1-content p,
+.maps-1-header h1 {
+  color: #fff;
+}
+
+.maps-1-header h1 {
+  font-weight: 100;
+  font-size: 45px;
+  text-shadow: 0 0 10px #000;
+}
+
+.maps-1-content p {
+  text-align: center;
+  font-size: 30px;
+  font-family: Poppins, sans-serif;
+}
+
+@keyframes title-animation {
+  0% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+footer {
+  background-image: url(https://github.com/lefren/hci/blob/main/footer-bg-1.png?raw=true);
+}
+
+.icon {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding-top: 30px;
+  border-radius: 50%;
+}
+
+.icon i {
+  color: #fff;
+  font-size: 30px;
+}
+
+.icon i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.logo-footer {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.logo-footer img {
+  width: 15%;
+}
+
+.privacy ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 20px;
+}
+
+.privacy ul li a {
+  color: #fff;
+}
+
+.privacy ul li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hoyoverse {
+  width: 30%;
+}
+
+.logo-footer-2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 50px;
+}
+
+.footer-copyright p,
+.footer-text p {
+  color: #fff;
+  text-align: center;
+  margin: 20px 20px 0 20px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 2;
+}
+
+.dropdown-menu.open {
+  height: 240px;
+}
+
+.dropdown-menu li {
+  list-style: none;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu a {
+  color: #fff;
+}
+
+.active-nav,
+.dropdown-menu li a:hover {
+  text-shadow: 0 0 10px azure, 0 0 20px #0ff, 0 0 40px #1e90ff, 0 0 80px #00f;
+  will-change: filter, color;
+  filter: saturate(60%);
+}
+
+@media only screen and (max-width: 1850px) {
+  .hide {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+  .menu,
+  .register {
+    display: none;
+  }
+
+  .navbar .toggle-btn {
+    display: block;
+    padding: 10px;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+
+  .navbar-about .toggle-btn {
+    display: block;
+    padding: 10px;
+  }
+
+  .logo-footer img,
+  .logo-footer-2 img {
+    width: 30%;
+  }
+
+  .hoyoverse {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .content img {
+    width: 100%;
+  }
+
+  .content {
+    margin-top: 70px;
+  }
+
+  .maps-1-content p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr [k] 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0fr 0fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+    gap: 1px 0;
+    grid-auto-flow: row;
+  }
+
+  .a1 {
+    grid-area: 2/2/3/4;
+  }
+
+  .mp1 {
+    grid-area: 3/2/5/10;
+  }
+
+  .mp2 {
+    grid-area: 5/2/7/10;
+  }
+
+  .mp3 {
+    grid-area: 7/2/9/10;
+  }
+
+  .mp4 {
+    grid-area: 9/2/11/10;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-about img {
+    width: 7rem;
+  }
+
+  .dropdown-menu {
+    left: 2rem;
+    width: unset;
+  }
+
+  .icon i {
+    font-size: 20px;
+  }
+
+  .privacy ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content img {
+    justify-content: center;
+  }
+
+  .maps-1-header h1 {
+    font-size: 30px;
+  }
+
+  .maps-1-content p {
+    font-size: 20px;
+  }
+
+  .logo-footer-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer a,
+  footer p {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .mp1 img {
+    height: 60%;
+  }
+
+  .mp2 img {
+    height: 60%;
+  }
+
+  .mp3 img {
+    height: 60%;
+  }
+
+  .mp4 img {
+    height: 60%;
+  }
+
+  .mp2 {
+    grid-area: 3/2/7/10;
+  }
+
+  .mp3 {
+    grid-area: 3/2/9/10;
+  }
+
+  .mp4 {
+    grid-area: 3/2/26/10;
+  }
+}

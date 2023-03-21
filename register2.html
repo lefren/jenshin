@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genshin Impekz</title>
+    <link rel="stylesheet" href="register2.css">
+    <script
+      src="https://kit.fontawesome.com/4d9121ebec.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="register-all">
+      <header>
+        <div class="navbar">
+          <div class="navbar-container">
+            <div class="logo">
+              <img src="https://github.com/lefren/hci/blob/main/white%20blue.png?raw=true" alt="logo" />
+              <!-- <h1>Genshin Impekz</h1> -->
+            </div>
+            <div class="menu">
+              <ul>
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="mondstat.html">Characters</a></li>
+                <li><a href="#">Maps</a></li>
+                <li><a href="about-us.html">About</a></li>
+              </ul>
+            </div>
+            <div class="register">
+              <div class="profile-picture-container">
+                <img class="profile-picture" src="Assets/user.png" alt="user" />
+              </div>
+              <p><a href="register2.html">Register</a></p>
+            </div>
+            <div class="toggle-btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown-menu">
+          <li><a href="index2.html">Home</a></li>
+          <li><a href="mondstat.html">Characters</a></li>
+          <li><a href="#">Maps</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a class ="active-nav" href="register2.html">Register</a></li>
+        </div>
+      </header>
+      <main>
+        <div class="register-page-container-parent">
+          <div class="register-page-container">
+            <div class="register-form">
+              <div class="register-page">
+                <h1>Registration Page</h1>
+              </div>
+              <form class="form" id="Formnya">
+                <div class="name-form">
+                  <p>Name</p>
+                  <input type="text" placeholder = "Your Name" name="inputText" id="inputName" />
+                  
+                </div>
+                <span class="error" id="Error-Name" style="display: none;">
+                </span>
+
+                <div class="email-form">
+                  <p>Email</p>
+                  <input type="email" placeholder = "yourname@gmail.com" name="inputEmail" id="inputEmail" />
+                </div>
+                <span class="error" id="Error-Email" style="display: none;">
+                </span>
+                <div class="password-form">
+                  <!-- <small>Error message</small> -->
+                  <p>Password</p>
+                  <input type="password" placeholder = "Minimal 8 Characters" name="inputPassword" id="inputPassword"/>
+                </div>
+                <span class="error" id="Error-Password" style="display: none;">
+                </span>
+                <div class="age-form">
+                  <p>Age</p>
+                  <input type="number" placeholder = "More than 11" name="inputAge"
+                  id="inputAge" />
+                </div>
+                    <span class="error" id="Error-Age" style="display: none;">
+                    </span>
+                <div class="agreement-form">
+                  <label class="agreement-label">
+                    <input type="checkbox" name="checkbox" id ="inputAgree" />
+                    <span class="error" id="Error-Agree" style="display: none;">
+                  </span>
+                    I have agreed to the terms and conditions of the game
+                  </label>                
+                </div>
+                <span class="error" id="Error-CKB" style="display: none;">
+                </span>
+
+                <div class="button-register">
+                  <button  id="registerBtn" type="button" onclick="VAL()">Register</button>
+                  <div id="divError">
+                </div>
+
+                </form>
+                    <div id="asynchronous"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="footer-content">
+          <div class="icon">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-discord"></i>
+              <i class="fa-brands fa-reddit-alien"></i>
+          </div>
+          <div class="logo-footer">
+              <img src="https://github.com/lefren/hci/blob/main/white%20blue.png?raw=true" alt="">
+              <!-- <img src="Assets/hoyoverse.png" alt=""> -->
+          </div>
+          <div class="privacy">
+              <ul>
+                  <li><a id="privacyPolicy">Privacy Policy</a></li>
+                  <li><a>Terms of Service</a></li>
+                  <li><a>About Us</a></li>
+                  <li><a>Contact Us</a></li>
+              </ul>
+          </div>
+          <div class="logo-footer-2">
+              <img src="https://github.com/lefren/hci/blob/main/playstation.png?raw=true" alt="">
+              <img src="https://github.com/lefren/hci/blob/main/hoyoverse.png?raw=true" alt="" class="hoyoverse">
+          </div>
+          <div class="footer-text">
+              <p>"PlayStation Family Mark," "PS5 logo" and "PS4 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
+                  Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games.
+                  All other trademarks are the property of their respective owners.</p>
+          </div>
+          <div class="footer-copyright">
+              <p>Copyright © Ferren Andrea, Stefanie Angeline Sanjaya. All Rights Reserved</p>
+          </div>
+      </div>
+  </footer>
+
+  </body>
+  <script src="register.js"></script>
+</html>

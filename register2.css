@@ -1,0 +1,695 @@
+.TEXT-error {
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: -25px;
+  margin-left: 5px
+}
+
+.TEXT-error2 {
+  text-align: center;
+  margin-top: -6px;
+  margin-bottom: -25px;
+  margin-left: 5px
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+@font-face {
+  font-family: genshinFont;
+  src: url(Assets/zh-cn.ttf)
+}
+
+body {
+  font-family: genshinFont;
+  color: #333;
+  line-height: 1.6;
+  margin: auto
+}
+
+a {
+  text-decoration: none;
+  color: #333
+}
+
+p {
+  margin: 10px 0
+}
+
+ul {
+  list-style-type: none
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+.navbar {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(255, 255, 255, 0))
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 0 0
+}
+
+.navbar li {
+  margin: 0 15px
+}
+
+.navbar img {
+  width: 10rem;
+  height: auto
+}
+
+.navbar a {
+  color: #fff;
+  text-shadow: 0 4px 4px #000;
+}
+
+.navbar a:hover {
+  padding-top: 10px;
+  border-top: 2px solid #fff
+}
+
+.register {
+  display: flex;
+  justify-content: right;
+  align-items: center
+}
+
+.profile-picture-container {
+  width: 50px;
+  text-align: center;
+  padding: 10px
+}
+
+.profile-picture {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain
+}
+
+.navbar .toggle-btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none
+}
+
+.home-header {
+  background-image: url(Assets/jumbotron-home.jpg);
+  background-position: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100%
+}
+
+.content {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .5);
+  color: #fff;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin-top: 30px;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center
+}
+
+.content img {
+  width: 50%;
+  filter: blur(0)
+}
+
+h1 {
+  margin-left: 40px
+}
+
+.navbar-about {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-image: url(Assets/navbar-about.png);
+  position: fixed;
+  z-index: 2
+}
+
+.navbar-about ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 0 0
+}
+
+.navbar-about li {
+  margin: 0 15px
+}
+
+.navbar-about img {
+  width: 10rem;
+  height: auto
+}
+
+.navbar-about a {
+  color: #fff
+}
+
+.navbar-about a:hover {
+  padding-top: 10px;
+  border-top: 2px solid #fff
+}
+
+.navbar-about .toggle-btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none
+}
+
+.dropdown-menu.open {
+  /* display: none; */
+  height: 240px;
+}
+
+
+.about-header {
+  background-position: cover;
+  background-size: cover;
+  width: 100%
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@media only screen and (max-width:300px) {
+  .text {
+    font-size: 11px
+  }
+}
+
+.register-all {
+  background-image: url(Assets/register-bg.jpg);
+  background-position: cover;
+  background-size: cover;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  animation: changeBackground 100s ease-in-out infinite
+}
+
+.register-page-container-parent {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 50px
+}
+
+.register-page-container {
+  background-image: url(Assets/register-bg-2.png);
+  background-repeat: no-repeat;
+  padding-top: 21px;
+  background-size: contain;
+  width: 100%;
+  height: 447px;
+  display: flex;
+  justify-content: center;
+  background-position: center
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url(Assets/register-bg-2.jpg)
+  }
+
+  25% {
+    background-image: url(Assets/register-bg-1.jpg)
+  }
+
+  50% {
+    background-image: url(Assets/register-bg.jpg)
+  }
+
+  100% {
+    background-image: url(Assets/register-bg-3.jpg)
+  }
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column
+}
+
+.register-page {
+  width: 600px
+}
+
+.register-page h1 {
+  font-weight: 100;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 17px
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  justify-content: center;
+  height: 325px;
+  padding-left: 20px
+}
+
+.form p {
+  width: 100px
+}
+
+.age-form,
+.agreement-form,
+.email-form,
+.name-form,
+.password-form {
+  display: flex;
+  gap: 10px;
+  height: 30px
+}
+
+.error {
+  color: red;
+  display: block;
+  font-size: 6px
+}
+
+#inputAge,
+#inputEmail,
+#inputPassword,
+#inputText {
+  height: 30px
+}
+
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=text] {
+  width: 500px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #828282;
+  box-sizing: border-box
+}
+
+.agreement-form {
+  justify-content: center
+}
+
+.agreement-label {
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 1.5em;
+  margin-top: 7px
+}
+
+.button-register {
+  font-weight: 100;
+  text-align: center;
+  margin-top: 10px
+}
+
+.button-register button {
+  font-family: genshinFont;
+  background-color: #535353;
+  color: #fff;
+  border: none;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px
+}
+
+.button-register button:hover {
+  box-shadow: 5px 5px 8px #888
+}
+
+.TEXT-ERROR {
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: -25px;
+  margin-left: 5px
+}
+
+.TEXT-error {
+  text-align: center;
+  margin-bottom: -25px;
+  margin-left: 5px
+}
+
+.mondstat-header-page {
+  background-image: url(Assets/mondstat-bg-fixed-1.jpg);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-position: cover;
+  background-size: cover;
+  width: 100%
+}
+
+.main-page-characters {
+  display: flex;
+  flex-direction: column
+}
+
+.main-page-header h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: 100;
+  font-size: 48px;
+  text-shadow: 0 4px 4px #000
+}
+
+.main-page-content {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0
+}
+
+@keyframes char-animation {
+  0% {
+    opacity: 0
+  }
+
+  10% {
+    opacity: .1
+  }
+
+  25% {
+    opacity: .25
+  }
+
+  50% {
+    opacity: .5
+  }
+
+  75% {
+    opacity: .75
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    font-size: 30px
+  }
+
+  10% {
+    font-size: 32px
+  }
+
+  25% {
+    font-size: 34px
+  }
+
+  50% {
+    font-size: 38px
+  }
+
+  100%,
+  75% {
+    font-size: 40px
+  }
+}
+
+footer {
+  background-image: url(https://github.com/lefren/hci/blob/main/footer-bg-1.png?raw=true);
+}
+
+.icon {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding-top: 30px;
+  border-radius: 50%;
+}
+
+.icon i {
+  color: #fff;
+  font-size: 30px;
+}
+
+.icon i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.logo-footer {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.logo-footer img {
+  width: 15%;
+}
+
+.privacy ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 20px;
+}
+
+.privacy ul li a {
+  color: #fff;
+}
+
+.privacy ul li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hoyoverse {
+  width: 30%;
+}
+
+.logo-footer-2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  gap: 50px;
+}
+
+.footer-copyright p,
+.footer-text p {
+  color: #fff;
+  text-align: center;
+  margin: 20px 20px 0 20px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(0, 0, 0, .4);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  transition: height .2s cubic-bezier(.175, .885, .32, 1.275);
+  z-index: 2
+}
+
+.dropdown-menu li {
+  list-style: none;
+  padding: .7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.dropdown-menu a {
+  color: #fff
+}
+
+.active-nav,
+.dropdown-menu li a:hover {
+  text-shadow: 0 0 10px azure, 0 0 20px #0ff, 0 0 40px #1e90ff, 0 0 80px #00f;
+  will-change: filter, color;
+  filter: saturate(60%);
+}
+
+@media (max-width:992px) {
+  header {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden
+  }
+
+  .menu,
+  .register {
+    display: none
+  }
+
+  .navbar .toggle-btn {
+    display: block;
+    padding: 10px
+  }
+
+  .dropdown-menu {
+    display: block
+  }
+
+  .navbar-about .toggle-btn {
+    display: block;
+    padding: 10px
+  }
+
+  .logo-footer img,
+  .logo-footer-2 img {
+    width: 30%;
+  }
+
+  .hoyoverse {
+    object-fit: contain;
+  }
+}
+
+@media (max-width:1000px) {
+  .register-page-container {
+    background-size: cover;
+    height: 447px
+  }
+}
+
+@media (max-width:768px) {
+  .content {
+    flex-direction: column
+  }
+
+  .content img {
+    width: 100%
+  }
+
+  .content {
+    margin-top: 70px
+  }
+
+  .register-page h1 {
+    font-size: 22px
+  }
+}
+
+@media (max-width:650px) {
+  .register-page-container {
+    background-image: url('Assets/register-bg-responsive.png');
+    background-size: cover;
+    height: 479px
+  }
+
+  .TEXT-error2 {
+    margin-top: 16px
+  }
+
+  .form {
+    height: 400px
+  }
+
+  .agreement-form label {
+    text-align: center
+  }
+
+  .form {
+    width: 400px
+  }
+
+  .form p {
+    width: 100px;
+    font-size: 13px;
+    margin-left: 20px
+  }
+
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=text] {
+    max-width: fit-content
+  }
+
+  .register-page {
+    width: 400px
+  }
+
+  .button-register {
+    padding-top: 20px
+  }
+}
+
+@media (max-width:576px) {
+  .dropdown-menu {
+    left: 2rem;
+    width: unset
+  }
+
+  .content {
+    flex-direction: column
+  }
+
+  .content img {
+    justify-content: center
+  }
+
+  .icon i {
+    font-size: 20px;
+  }
+
+  .privacy ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
